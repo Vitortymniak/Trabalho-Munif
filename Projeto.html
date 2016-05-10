@@ -1,0 +1,248 @@
+
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            #heranca{
+                display: none;
+            }
+            #encapsulamento{
+                display: none;
+            }
+            #polimorfismo{
+                display: none;
+            }
+            #sobrecarga{
+                display: none;
+            }
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                padding-top: 20px;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #000;
+                color: white;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height:auto;} 
+                .branco{
+                    background-color: #fff;
+                }
+            }
+        </style>
+        <script>
+            function hom() {
+                document.getElementById("home").style.display = "block";
+                document.getElementById("heranca").style.display = "none";
+                document.getElementById("sobrecarga").style.display = "none";
+                document.getElementById("polimorfismo").style.display = "none";
+                document.getElementById("ecapsulamento").style.display = "none";
+            }
+            function her() {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("heranca").style.display = "block";
+                document.getElementById("sobrecarga").style.display = "none";
+                document.getElementById("polimorfismo").style.display = "none";
+                document.getElementById("encapsulamento").style.display = "none";
+            }
+            function sobcar() {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("heranca").style.display = "none";
+                document.getElementById("sobrecarga").style.display = "block";
+                document.getElementById("polimorfismo").style.display = "none";
+                document.getElementById("encapsulamento").style.display = "none";
+            }
+            function polim() {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("heranca").style.display = "none";
+                document.getElementById("sobrecarga").style.display = "none";
+                document.getElementById("polimorfismo").style.display = "block";
+                document.getElementById("encapsulamento").style.display = "none";
+            }
+            function encap() {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("heranca").style.display = "none";
+                document.getElementById("sobrecarga").style.display = "none";
+                document.getElementById("polimorfismo").style.display = "none";
+                document.getElementById("encapsulamento").style.display = "block";
+            }
+
+        </script>
+    </head>
+    <body style="background-color: #f1f1f1;">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#" onclick="hom();">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" onclick="her();">Herança</a></li>
+                        <li><a href="#" onclick="encap();">Encapsulamento</a></li>
+                        <li><a href="#" onclick="sobcar();">SobreCarga</a></li>
+                        <li><a href="#" onclick="polim();">Polimorfismo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid text-center">    
+            <div class="row content">
+                <div class="col-sm-2 sidenav">
+                </div>
+                <div class="col-sm-8 text-left" style="background-color: #fff;">
+                    <div id="home">
+                        <center> 
+                            <h1 style="color: #ff0000">HTML5</h1>
+                        </center>
+                        <hr>
+                        <h4>HTML5 (Hypertext Markup Language, versão 5) é uma linguagem para estruturação e apresentação de conteúdo para a World Wide Web e é uma tecnologia chave da Internet originalmente proposto por Opera Software, com novas funcionalidades como semântica e acessibilidade.</h4>
+                        <br>
+                        <center>
+                            <h1 style="color: #ff0000">JavaScript</h1>
+                        </center>
+                        <hr>
+                        <h4>JavaScript é uma linguagem de programação interpretada. Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser executados do lado do cliente e interagissem com o usuário sem a necessidade deste script passar pelo servidor, controlando o navegador, realizando comunicação assíncrona e alterando o conteúdo do documento exibido.</h4>
+                        <br>
+                        <center>
+                            <h1 style="color: #ff0000">CSS</h1>
+                        </center>
+                        <hr>
+                        <h4>Cascading Style Sheets (CSS) é uma linguagem de folhas de estilo utilizada para definir a apresentação de documentos escritos em uma linguagem de marcação, como HTML ou XML.</h4>
+                        <br>
+                    </div>
+
+                    <div id="heranca">
+                        <center>
+                            <h1>Herança</h1>
+                        </center>
+                        <hr>
+                        <h4>A herança é um princípio da POO que permite a criação de novas classes a partir de outras previamente criadas. Essas novas classes são chamadas de subclasses, ou classes derivadas; e as classes já existentes, que deram origem às subclasses, são chamadas de superclasses, ou classes base. Deste modo é possível criar uma hierarquia dessas classes, tornando, assim, classes mais amplas e classes mais específicas. Uma subclasse herda métodos e atributos de sua superclasse; apesar disso, pode escrevê-los novamente para uma forma mais específica de representar o comportamento do método herdado.</h4>
+                        <p>import java.util.Date;<br>
+                            public class Pessoa {<br>
+                            public String nome;<br>
+                            public String cpf;<br>
+                            public Date data_nascimento;<br>
+                            <br>
+                            public Pessoa(String _nome, String _cpf, Date _data) {<br>
+                            this.nome = _nome;<br>
+                            this.cpf = _cpf;<br>
+                            this.data_nascimento = _data;<br>
+                            }<br>
+                            }<br>
+                        </p>
+                    </div>
+                    <div id="encapsulamento">
+                        <center>
+                            <h1>Encapsulamento</h1>
+                        </center>
+                        <hr>
+                        <h4>É a técnica utilizada para esconder uma ideia, ou seja, não expôr detalhes internos para o usuário, tornando partes do sistema mais independentes possível. Por exemplo, quando um controle remoto estraga apenas é trocado ou consertado o controle e não a televisão inteira.<br>
+                            Em um processo de encapsulamento os atributos das classes são do tipo private. Para acessar esses tipos de modificadores, é necessário criar métodos setters e getters.</h4>
+                        <p>public class Funcionario {<br>
+                            private double salario;<br>
+                            private String nome;<br>
+
+                            public String getNome() {<br>
+                            return nome;<br>
+                            }<br>
+                            <br>
+                            public void setNome(String nome) {<br>
+                            this.nome = nome;<br>
+                            }<br>
+                            <br>
+                            public void setSalario(double salario) {<br>
+                            this.salario = salario;<br>
+                            }<br>
+                            <br>
+                            public double getSalario() {<br>
+                            return salario;<br>
+                            }<br>
+                            }<br>
+                        </p>
+                    </div>
+                    <div id="sobrecarga">
+                        <center>
+                            <h1>SobreCarga</h1>
+                        </center>
+                        <hr>
+                        <h4>Sobrecarga de método permite a existência de vários métodos de mesmo nome, porém com assinaturas levemente diferentes ou seja variando no número , tipo de argumentos , no valor de retorno e até variáveis diferentes.</h4>
+                        <p>public class Soma {<br>
+                            <br>
+                            public int soma(int x, int y) {<br>
+                            return x+y;<br>
+                            } <br>
+                            <br>
+                            public String soma(String x, String y) {<br>
+                            return x+y;<br>
+                            } <br>
+                            <br>
+                            public double soma(double x, double y) {<br>
+                            return x+y;<br>
+                            } <br>
+                            <br>
+                            }<br>
+                        </p>
+                    </div>
+                    <div id="polimorfismo">
+                        <center>
+                            <h1>Polimorfismo</h1>
+                        </center>
+                        <hr>
+                        <h4>Na programação orientada a objetos, o polimorfismo permite que referências de tipos de classes mais abstratas representem o comportamento das classes concretas que referenciam. Assim, é possível tratar vários tipos de maneira homogênea.</h4>
+                        <p>public class Contas {<br>
+                            public static void mostrarCalculo(OperacaoMatematica operacao, double x, double y) {<br>
+                            System.out.println("O resultado é: " + operacao.calcular(x, y));<br>
+                            }<br>
+                            <br>
+                            public static void main(String args[]) {<br>
+                            // Primeiro calculamos uma soma<br>
+                            Contas.mostrarCalculo(new Soma(), 5, 5); // Imprime o resultado é: 10<br>
+                            <br>
+                            // Depois uma subtração<br>
+                            Contas.mostrarCalculo(new Subtracao(), 5, 5); // Imprime o resultado é: 0<br>
+                            }<br>
+                            }<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-2 sidenav">
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+        </footer>
+
+    </body>
+</html>
